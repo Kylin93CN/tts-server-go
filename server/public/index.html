@@ -9,256 +9,261 @@
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-        <a class="navbar-brand github-button" href="https://github.com/jing332/tts-server-go" data-size="large"
-           data-show-count="true" aria-label="Star jing332/tts-server-go on GitHub">Star tts-server-go</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand github-button" href="https://github.com/jing332/tts-server-go" data-size="large"
+                data-show-count="true" aria-label="Star jing332/tts-server-go on GitHub">Star tts-server-go</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Edge接口</a></li>
-                <li class="nav-item"><a class="nav-link" href="azure.html">Azure接口</a></li>
-                <li class="nav-item"><a class="nav-link" href="creation.html">Creation接口(已失效)</a></li>
-            </ul>
-            <p class="fst-italic">本页面源码修改自 <a href="https://github.com/wxxxcxx/ms-ra-forwarder">ms-ra-forwarder</a>
-            </p>
-        </div>
-    </div>
-</nav>
-<div class="container" style="margin-top: 30px;">
-    <div style="" class="alert alert-primary" role="alert">
-        手机版请在右上角菜单切换到其他接口
-    </div>
-    <form>
-        <div class="row">
-            <div class="col">
-                <label class="form-label">配置名称：</label>
-                <input name="name" type="text" class="form-control" value="大声朗读1233"/>
-                <div class="form-text">在阅读APP中显示的名称。</div>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Edge接口</a></li>
+                    <li class="nav-item"><a class="nav-link" href="azure.html">Azure接口</a></li>
+                    <li class="nav-item"><a class="nav-link" href="creation.html">Creation接口(已失效)</a></li>
+                </ul>
+                <p class="fst-italic">本页面源码修改自 <a href="https://github.com/wxxxcxx/ms-ra-forwarder">ms-ra-forwarder</a>
+                </p>
             </div>
         </div>
-        <div class="row">
-            <div class="col">
-                <label class="form-label">语言：</label>
-                <select name="language" class="form-select" onchange="updateLanguageConfig()">
-                </select>
-                <div class="form-text">选择所用语言</div>
-            </div>
+    </nav>
+    <div class="container" style="margin-top: 30px;">
+        <div style="" class="alert alert-primary" role="alert">
+            手机版请在右上角菜单切换到其他接口
         </div>
-        <div class="row">
-            <div class="col">
-                <label class="form-label">声音：</label>
-                <select name="voiceName" class="form-select" onchange="updateConfigName()">
-                </select>
-                <div class="form-text">声音列表加载可能有点慢，请耐心等待！</div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <label class="form-label">音频格式：</label>
-                <select name="voiceFormat" class="form-select">
-                    <option value="webm-24khz-16bit-mono-opus" selected>webm-24khz-16bit-mono-opus</option>
-                    <option value="audio-24khz-48kbitrate-mono-mp3">audio-24khz-48kbitrate-mono-mp3</option>
-                    <option value="audio-24khz-96kbitrate-mono-mp3">audio-24khz-96kbitrate-mono-mp3</option>
-                </select>
-                <div class="form-text">
-                    <p>Edge大声朗读接口目前仅支持这些</p>
+        <form>
+            <div class="row">
+                <div class="col">
+                    <label class="form-label">配置名称：</label>
+                    <input name="name" type="text" class="form-control" value="大声朗读1233" />
+                    <div class="form-text">在阅读APP中显示的名称。</div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col">
+                    <label class="form-label">语言：</label>
+                    <select name="language" class="form-select" onchange="updateLanguageConfig()">
+                    </select>
+                    <div class="form-text">选择所用语言</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label class="form-label">声音：</label>
+                    <select name="voiceName" class="form-select" onchange="updateConfigName()">
+                    </select>
+                    <div class="form-text">声音列表加载可能有点慢，请耐心等待！</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label class="form-label">音频格式：</label>
+                    <select name="voiceFormat" class="form-select">
+                        <option value="webm-24khz-16bit-mono-opus" selected>webm-24khz-16bit-mono-opus</option>
+                        <option value="audio-24khz-48kbitrate-mono-mp3">audio-24khz-48kbitrate-mono-mp3</option>
+                        <option value="audio-24khz-96kbitrate-mono-mp3">audio-24khz-96kbitrate-mono-mp3</option>
+                    </select>
+                    <div class="form-text">
+                        <p>Edge大声朗读接口目前仅支持这些</p>
+                    </div>
+                </div>
 
-            <div class="row">
-                <div>
-                    <label class="form-label">凭据（TOKEN）：</label>
-                    <input name="token" class="form-control" type="text" value="">
-                    <div class="form-text">如果没有设置 -token 命令行参数请为空。</div>
+                <div class="row">
+                    <div>
+                        <label class="form-label">凭据（TOKEN）：</label>
+                        <input name="token" class="form-control" type="text" value="">
+                        <div class="form-text">如果没有设置 -token 命令行参数请为空。</div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="row">
-                <div class="col">
-                    <label class="form-label">测试文本：</label>
-                    <textarea name="previewText" class="form-control" rows="3"
-                              cols="">如果喜欢这个项目的话请点个 Star 吧。</textarea>
+                <div class="row">
+                    <div class="col">
+                        <label class="form-label">测试文本：</label>
+                        <textarea name="previewText" class="form-control" rows="3"
+                            cols="">如果喜欢这个项目的话请点个 Star 吧。</textarea>
+                    </div>
                 </div>
-            </div>
-            <div style="height:20px"></div>
-            <div class="row">
-                <div class="col">
-                    <label class="text-success" id="audioInfoLabel">大小: 0kb | 耗时: 0ms</label>
+                <div style="height:20px"></div>
+                <div class="row">
+                    <div class="col">
+                        <label class="text-success" id="audioInfoLabel">大小: 0kb | 耗时: 0ms</label>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <button id="previewButton" type="button" class="btn btn-secondary"
-                            onclick="preview()">测试
-                    </button>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-primary active" onclick="createLegadoUrl()">生成导入链接</button>
-                        <button type="button" class="btn btn-primary" onclick="openSettingsModal()">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                 class="bi bi-sliders" viewBox="0 0 16 16">
-                                <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
-                                <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"/>
-                            </svg>
+                <div class="row">
+                    <div class="col">
+                        <button id="previewButton" type="button" class="btn btn-secondary" onclick="preview()">测试
                         </button>
+                        <button id="previewButton" type="button" class="btn btn-secondary" onclick="download()">下载
+                        </button>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-primary active"
+                                onclick="createLegadoUrl()">生成导入链接</button>
+                            <button type="button" class="btn btn-primary" onclick="openSettingsModal()">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                    class="bi bi-sliders" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z" />
+                                    <path
+                                        d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div style="height:50px"></div>
+    </div>
+
+    <div id="setIntervalModel" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">导入链接设置</h5>
+                </div>
+                <div class="modal-body">
+                    <label>
+                        并发率(请求间隔 单位:毫秒):
+                        <input class="form-control" id="intervalValue" type="number" value="5000" max="100000">
+                    </label>
+                </div>
+                <i class="bi bi-gear"></i>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="
+                    localStorage.setItem('interval', document.getElementById('intervalValue').value)
+                ">保存
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="legadoUrlModal" class="modal fade" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">阅读链接</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="collapse" id="qrCodeCollapse">
+                    <div class="card card-body">
+                        <div id="legadoUrlQRCode" style="margin: auto"></div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div style="position: relative">
+                        <textarea id="legadoUrl" class="form-control" readonly rows="3" cols="2"></textarea>
+                        <button id="copyBtn" class="btn btn-dark btn-sm"
+                            style="--bs-btn-font-size: 10px;position:absolute;right:0;top:0;z-index: 20"
+                            onclick="copyLegadoUrl()">复制
+                        </button>
+
+                    </div>
+                    <div class="alert alert-primary" role="alert">
+                        请在阅读的朗读引擎设置中选择网络导入此链接。
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#qrCodeCollapse" aria-expanded="false" aria-controls="qrCodeCollapse"
+                            onclick="onQRCodeClick()">
+                            二维码
+                        </button>
+                        <button type="button" class="btn btn-success" onclick="openAppImport()">一键导入</button>
                     </div>
                 </div>
             </div>
         </div>
-    </form>
-    <div style="height:50px"></div>
-</div>
-
-<div id="setIntervalModel" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-     aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">导入链接设置</h5>
-            </div>
-            <div class="modal-body">
-                <label>
-                    并发率(请求间隔 单位:毫秒):
-                    <input class="form-control" id="intervalValue" type="number" value="5000" max="100000">
-                </label>
-            </div>
-            <i class="bi bi-gear"></i>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
-                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="
-                    localStorage.setItem('interval', document.getElementById('intervalValue').value)
-                ">保存
-                </button>
-            </div>
-        </div>
     </div>
-</div>
 
-<div id="legadoUrlModal" class="modal fade" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">阅读链接</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="collapse" id="qrCodeCollapse">
-                <div class="card card-body">
-                    <div id="legadoUrlQRCode" style="margin: auto"></div>
-                </div>
-            </div>
-            <div class="modal-body">
-                <div style="position: relative">
-                    <textarea id="legadoUrl" class="form-control" readonly rows="3" cols="2"></textarea>
-                    <button id="copyBtn" class="btn btn-dark btn-sm"
-                            style="--bs-btn-font-size: 10px;position:absolute;right:0;top:0;z-index: 20"
-                            onclick="copyLegadoUrl()">复制
-                    </button>
+    <script src=https://cdn.staticfile.org/github-buttons/2.22.0/buttons.min.js></script>
+    <script src="https://cdn.staticfile.org/bootstrap/5.2.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@keeex/qrcodejs-kx@1.0.2/qrcode.min.js"></script>
+    <script src="static.js?v1.0.0"></script>
+    <script>
+        let token = localStorage.getItem("token")
+        document.getElementsByName('token')[0].value = token
 
-                </div>
-                <div class="alert alert-primary" role="alert">
-                    请在阅读的朗读引擎设置中选择网络导入此链接。
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#qrCodeCollapse" aria-expanded="false" aria-controls="qrCodeCollapse" onclick="onQRCodeClick()">
-                        二维码
-                    </button>
-                    <button type="button" class="btn btn-success" onclick="openAppImport()">一键导入</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+        let voices = [];
+        fetch('https://speech.platform.bing.com/consumer/speech/synthesize/readaloud/voices/list?trustedclienttoken=6A5AA1D4EAFF4E9FB37E23D68491D6F4')
+            .then(response => {
+                if (response.status === 200) {
+                    return response.json();
+                } else {
+                    return response.text().then(text => Promise.reject(text));
+                }
+            }).then(data => {
+                voices = data;
+                refreshVoice();
+            }).catch(reason => {
+                alert(reason);
+            });
 
-<script src=https://cdn.staticfile.org/github-buttons/2.22.0/buttons.min.js></script>
-<script src="https://cdn.staticfile.org/bootstrap/5.2.2/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@keeex/qrcodejs-kx@1.0.2/qrcode.min.js"></script>
-<script src="static.js?v1.0.0"></script>
-<script>
-    let token = localStorage.getItem("token")
-    document.getElementsByName('token')[0].value = token
-
-    let voices = [];
-    fetch('https://speech.platform.bing.com/consumer/speech/synthesize/readaloud/voices/list?trustedclienttoken=6A5AA1D4EAFF4E9FB37E23D68491D6F4')
-        .then(response => {
-            if (response.status === 200) {
-                return response.json();
-            } else {
-                return response.text().then(text => Promise.reject(text));
-            }
-        }).then(data => {
-        voices = data;
-        refreshVoice();
-    }).catch(reason => {
-        alert(reason);
-    });
-
-    function refreshVoice() {
-        let langElement = document.getElementsByName('language')[0]
-        langElement.innerHTML = ''
-        let localeList = new Map()
-        voices.forEach(item => {
-            let friendlyName = item['FriendlyName']
-            let locale = item['Locale']
-            if (!localeList.has(locale)) {
-                localeList.set(locale, cnLocalLanguage[locale] || friendlyName.split('- ')[1])
-            }
-        });
-        //排序语言列表
-        const sortMap = new Map([...localeList.entries()].sort((a, b) => a[1].localeCompare(b[1])));
-        sortMap.forEach((value, key) => {
-            let option = document.createElement('option');
-            option.value = key
-            option.innerText = value
-            if (key === "zh-CN") option.selected = true
-            langElement.appendChild(option)
-        })
-
-        updateLanguageConfig()
-    }
-
-    function updateLanguageConfig() {
-        let voiceElement = document.getElementsByName('voiceName')[0];
-        let language = document.getElementsByName('language')[0].value
-        voiceElement.innerHTML = ''
-        let voiceMap = new Map()
-        voices.forEach(function (value, key) {
-            if (value['locale'] === language) {
-                let pro = value['properties']
-                voiceMap.set(value['shortName'], (pro['LocalName'] ?? pro['ShortName']) + '-' + pro['LocaleDescription'])
-            }
-        })
-
-        updateVoiceConfig()
-    }
-
-    function updateVoiceConfig() {
-        let voiceElement = document.getElementsByName('voiceName')[0];
-        let language = document.getElementsByName('language')[0].value;
-        voiceElement.innerHTMl = '';
-        voices.forEach(value => {
-            if (value['Locale'] === language) {
+        function refreshVoice() {
+            let langElement = document.getElementsByName('language')[0]
+            langElement.innerHTML = ''
+            let localeList = new Map()
+            voices.forEach(item => {
+                let friendlyName = item['FriendlyName']
+                let locale = item['Locale']
+                if (!localeList.has(locale)) {
+                    localeList.set(locale, cnLocalLanguage[locale] || friendlyName.split('- ')[1])
+                }
+            });
+            //排序语言列表
+            const sortMap = new Map([...localeList.entries()].sort((a, b) => a[1].localeCompare(b[1])));
+            sortMap.forEach((value, key) => {
                 let option = document.createElement('option');
-                let shortName = value['ShortName']
-                option.value = shortName
-                option.innerText = cnLocalVoice[shortName] + "（" + shortName + "）" || shortName;
-                voiceElement.append(option)
-            }
-        })
-        updateConfigName()
-    }
+                option.value = key
+                option.innerText = value
+                if (key === "zh-CN") option.selected = true
+                langElement.appendChild(option)
+            })
 
-    function updateConfigName() {
-        let voice = document.getElementsByName('voiceName')[0].value;
-        document.getElementsByName('name')[0].value = '大声朗读1233（' + voice + '）';
-    }
+            updateLanguageConfig()
+        }
 
-    function createSSML(text, voiceName) {
-        return '\
+        function updateLanguageConfig() {
+            let voiceElement = document.getElementsByName('voiceName')[0];
+            let language = document.getElementsByName('language')[0].value
+            voiceElement.innerHTML = ''
+            let voiceMap = new Map()
+            voices.forEach(function (value, key) {
+                if (value['locale'] === language) {
+                    let pro = value['properties']
+                    voiceMap.set(value['shortName'], (pro['LocalName'] ?? pro['ShortName']) + '-' + pro['LocaleDescription'])
+                }
+            })
+
+            updateVoiceConfig()
+        }
+
+        function updateVoiceConfig() {
+            let voiceElement = document.getElementsByName('voiceName')[0];
+            let language = document.getElementsByName('language')[0].value;
+            voiceElement.innerHTMl = '';
+            voices.forEach(value => {
+                if (value['Locale'] === language) {
+                    let option = document.createElement('option');
+                    let shortName = value['ShortName']
+                    option.value = shortName
+                    option.innerText = cnLocalVoice[shortName] + "（" + shortName + "）" || shortName;
+                    voiceElement.append(option)
+                }
+            })
+            updateConfigName()
+        }
+
+        function updateConfigName() {
+            let voice = document.getElementsByName('voiceName')[0].value;
+            document.getElementsByName('name')[0].value = '大声朗读1233（' + voice + '）';
+        }
+
+        function createSSML(text, voiceName) {
+            return '\
         <speak xmlns="http://www.w3.org/2001/10/synthesis" xmlns:mstts="http://www.w3.org/2001/mstts" xmlns:emo="http://www.w3.org/2009/10/emotionml" version="1.0" xml:lang="en-US">\
           <voice name="' + voiceName + '">\
               <prosody rate="0%" pitch="0%">\
@@ -266,79 +271,171 @@
               </prosody >\
           </voice >\
         </speak > ';
-    }
+        }
+        function getWavBytes(buffer, options) {
+            const type = options.isFloat ? Float32Array : Uint16Array
+            const numFrames = buffer.byteLength / type.BYTES_PER_ELEMENT
 
-    function preview() {
-        let headers = {'Content-Type': 'text/plain'};
-        let voiceName = document.getElementsByName('voiceName')[0].value;
-        let previewText = document.getElementsByName('previewText')[0].value;
-        let ssml = createSSML(previewText, voiceName)
-        let voiceFormat = document.getElementsByName('voiceFormat')[0].value;
-        let token = document.getElementsByName('token')[0].value;
+            const headerBytes = getWavHeader(Object.assign({}, options, { numFrames }))
+            const wavBytes = new Uint8Array(headerBytes.length + buffer.byteLength);
 
-        headers['Format'] = voiceFormat
-        localStorage.setItem("token", token)
-        if (token) headers['Token'] = token
+            // prepend header, then add pcmBytes
+            wavBytes.set(headerBytes, 0)
+            wavBytes.set(new Uint8Array(buffer), headerBytes.length)
 
-        let button = document.getElementById('previewButton')
-        let textInfo = document.getElementById('audioInfoLabel')
-        button.disabled = true
-        textInfo.innerText = "大小: 0kb | 耗时: 0ms"
-        let startTime = Date.now()
-        let ctx = new AudioContext();
-        fetch('/api/ra', {
-            method: 'post',
-            headers: headers,
-            body: ssml
-        }).then(response => {
-            if (response.status === 200) {
-                let audioSize = response.headers.get("Content-Length")
-                let elapsedTme = Date.now() - startTime
-                textInfo.innerText =
-                    `大小: ${unitConversion(audioSize)} | 耗时: ${elapsedTme}ms`
-                return response.arrayBuffer()
-            } else {
-                return response.text().then(text => Promise.reject(text));
+            return wavBytes
+        }
+
+        function getWavHeader(options) {
+            const numFrames = options.numFrames
+            const numChannels = options.numChannels || 2
+            const sampleRate = options.sampleRate || 44100
+            const bytesPerSample = options.isFloat ? 4 : 2
+            const format = options.isFloat ? 3 : 1
+
+            const blockAlign = numChannels * bytesPerSample
+            const byteRate = sampleRate * blockAlign
+            const dataSize = numFrames * blockAlign
+
+            const buffer = new ArrayBuffer(44)
+            const dv = new DataView(buffer)
+
+            let p = 0
+
+            function writeString(s) {
+                for (let i = 0; i < s.length; i++) {
+                    dv.setUint8(p + i, s.charCodeAt(i))
+                }
+                p += s.length
             }
-        }).then(arrayBuffer => ctx.decodeAudioData(arrayBuffer))
-            .then(audio => {
-                let player = ctx.createBufferSource();
-                player.buffer = audio;
-                player.connect(ctx.destination);
-                player.start(ctx.currentTime);
-            })
-            .catch(reason => {
-                alert(reason);
-            })
-            .finally(() => {
-                button.disabled = false
-            });
-    }
 
-    function createLegadoUrl() {
-        let name = document.getElementsByName('name')[0].value;
-        let voiceName = document.getElementsByName('voiceName')[0].value;
-        let voiceFormat = document.getElementsByName('voiceFormat')[0].value;
-        let token = document.getElementsByName('token')[0].value;
-        let interval = localStorage.getItem('interval') || 5000
-        let url = window.location.protocol + '//' + window.location.host + '/api/legado?api=' + encodeURI(window.location.protocol + '//' + window.location.host + '/api/ra')
-            + '&name=' + encodeURI(name)
-            + '&voiceName=' + voiceName
-            + '&voiceFormat=' + voiceFormat
-            + '&token=' + token
-            + '&concurrentRate=' + interval
-        let modal = new bootstrap.Modal(document.getElementById('legadoUrlModal'))
-        document.getElementById('legadoUrlQRCode').innerHTML = ''
-        /* 折叠二维码 */
-        let bsCollapse = new bootstrap.Collapse(document.getElementById('qrCodeCollapse'), {
-            toggle: false
-        })
-        bsCollapse.hide()
-        document.getElementById('legadoUrl').value = url;
-        modal.show();
-        localStorage.setItem("token", token)
-    }
-</script>
+            function writeUint32(d) {
+                dv.setUint32(p, d, true)
+                p += 4
+            }
+
+            function writeUint16(d) {
+                dv.setUint16(p, d, true)
+                p += 2
+            }
+
+            writeString('RIFF')              // ChunkID
+            writeUint32(dataSize + 36)       // ChunkSize
+            writeString('WAVE')              // Format
+            writeString('fmt ')              // Subchunk1ID
+            writeUint32(16)                  // Subchunk1Size
+            writeUint16(format)              // AudioFormat https://i.stack.imgur.com/BuSmb.png
+            writeUint16(numChannels)         // NumChannels
+            writeUint32(sampleRate)          // SampleRate
+            writeUint32(byteRate)            // ByteRate
+            writeUint16(blockAlign)          // BlockAlign
+            writeUint16(bytesPerSample * 8)  // BitsPerSample
+            writeString('data')              // Subchunk2ID
+            writeUint32(dataSize)            // Subchunk2Size
+
+            return new Uint8Array(buffer)
+        }
+
+        function download() {
+            const audio = window._audio;
+            console.log("🚀 ~ file: index.html:291 ~ download ~ audio:", audio)
+            if (!audio) {
+                alert('error, not find audio');
+                return;
+            }
+            const [left] = [audio.getChannelData(0)]
+            // interleaved
+            const interleaved = new Float32Array(left.length)
+            for (let src = 0, dst = 0; src < left.length; src++, dst += 1) {
+                interleaved[dst] = left[src]
+            }
+            // get WAV file bytes and audio params of your audio source
+            const wavBytes = getWavBytes(interleaved.buffer, {
+                isFloat: true,       // floating point or 16-bit integer
+                numChannels: 1,
+                sampleRate: 48000,
+            })
+            const wav = new Blob([wavBytes], { type: 'audio/wav' })
+            const fileName = `${new Date().valueOf()}.wav`;
+            const link = document.createElement('a');
+            link.href = window.URL.createObjectURL(wav);
+            link.download = fileName;
+            link.click();
+            window.URL.revokeObjectURL(link.href);
+        }
+
+        function preview() {
+            let headers = { 'Content-Type': 'text/plain' };
+            let voiceName = document.getElementsByName('voiceName')[0].value;
+            let previewText = document.getElementsByName('previewText')[0].value;
+            let ssml = createSSML(previewText, voiceName)
+            let voiceFormat = document.getElementsByName('voiceFormat')[0].value;
+            let token = document.getElementsByName('token')[0].value;
+
+            headers['Format'] = voiceFormat
+            localStorage.setItem("token", token)
+            if (token) headers['Token'] = token
+
+            let button = document.getElementById('previewButton')
+            let textInfo = document.getElementById('audioInfoLabel')
+            button.disabled = true
+            textInfo.innerText = "大小: 0kb | 耗时: 0ms"
+            let startTime = Date.now()
+            let ctx = new AudioContext();
+            fetch('/api/ra', {
+                method: 'post',
+                headers: headers,
+                body: ssml
+            }).then(response => {
+                if (response.status === 200) {
+                    let audioSize = response.headers.get("Content-Length")
+                    let elapsedTme = Date.now() - startTime
+                    textInfo.innerText =
+                        `大小: ${unitConversion(audioSize)} | 耗时: ${elapsedTme}ms`
+                    return response.arrayBuffer()
+                } else {
+                    return response.text().then(text => Promise.reject(text));
+                }
+            }).then(arrayBuffer => ctx.decodeAudioData(arrayBuffer))
+                .then(audio => {
+                    window._audio = audio;
+                    let player = ctx.createBufferSource();
+                    player.buffer = audio;
+                    player.connect(ctx.destination);
+                    player.start(ctx.currentTime);
+                })
+                .catch(reason => {
+                    alert(reason);
+                })
+                .finally(() => {
+                    button.disabled = false
+                });
+        }
+
+        function createLegadoUrl() {
+            let name = document.getElementsByName('name')[0].value;
+            let voiceName = document.getElementsByName('voiceName')[0].value;
+            let voiceFormat = document.getElementsByName('voiceFormat')[0].value;
+            let token = document.getElementsByName('token')[0].value;
+            let interval = localStorage.getItem('interval') || 5000
+            let url = window.location.protocol + '//' + window.location.host + '/api/legado?api=' + encodeURI(window.location.protocol + '//' + window.location.host + '/api/ra')
+                + '&name=' + encodeURI(name)
+                + '&voiceName=' + voiceName
+                + '&voiceFormat=' + voiceFormat
+                + '&token=' + token
+                + '&concurrentRate=' + interval
+            let modal = new bootstrap.Modal(document.getElementById('legadoUrlModal'))
+            document.getElementById('legadoUrlQRCode').innerHTML = ''
+            /* 折叠二维码 */
+            let bsCollapse = new bootstrap.Collapse(document.getElementById('qrCodeCollapse'), {
+                toggle: false
+            })
+            bsCollapse.hide()
+            document.getElementById('legadoUrl').value = url;
+            modal.show();
+            localStorage.setItem("token", token)
+        }
+    </script>
 </body>
 
 </html>
