@@ -1,7 +1,28 @@
-![MIT](https://img.shields.io/badge/license-MIT-green)
-[![CI](https://github.com/jing332/tts-server-go/actions/workflows/main.yml/badge.svg)](https://github.com/jing332/tts-server-go/actions/workflows/main.yml)
-[![Test](https://github.com/jing332/tts-server-go/actions/workflows/test.yml/badge.svg)](https://github.com/jing332/tts-server-go/actions/workflows/test.yml)
-![GitHub release (latest by date)](https://img.shields.io/github/downloads/jing332/tts-server-go/latest/total)
+# 命令
+
+## linux
+部署
+
+`nohup  go run ./cmd/cli/main.go  &`
+
+
+
+# new feture by Kylin93CN
+## 1. add downlaoad btn for azure.html
+
+# use
+## 1. for development
+win
+```shell
+go run .\cmd\cli\main.go
+```
+
+## 2. build
+ `tts-server-go` is file name.
+```shell
+go build -o tts-server-go cmd/cli/main.go
+```
+
 
 # 安卓系统推荐使用 tts-server-android 安装即用
 https://github.com/jing332/tts-server-android
@@ -25,17 +46,3 @@ https://github.com/jing332/tts-server-android
 Edge大声朗读接口: `http://localhost:1233/api/ra`
 
 
-# new feture by Kylin93CN
-## 1. add downlaoad btn for azure.html
-
-# use
-## 1. for development
-```shell
-go run .\cmd\cli\main.go
-```
-
-## 2. build
- `tts-server-go` is file name.
-```shell
-go build -o tts-server-go cmd/cli/main.go
-```
